@@ -474,6 +474,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Helper function to escape HTML attributes
   function escapeHtml(text) {
+    if (!text) return '';
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
